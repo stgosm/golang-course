@@ -3,61 +3,25 @@ package main
 import "fmt"
 
 func main() {
-	// Declaración de constantes
-	const pi float64 = 3.14
-	const pi2 = 3.1415
+	// https://golang.org/pkg/fmt/
+	// Declaración de variables
+	helloMessage := "Hello"
+	worldMessage := "World"
 
-	fmt.Println("pi:", pi)
-	fmt.Println("pi2:", pi2)
+	// Println
+	fmt.Println(helloMessage, worldMessage)
 
-	// Declaración de variables enteras
-	base := 12
-	var altura int = 14
-	var area int
+	// Printf
+	nombre := "Platzi"
+	cursos := 500
+	fmt.Printf("%s tiene más de %d cursos\n", nombre, cursos)
+	fmt.Printf("%v tiene más de %v cursos\n", nombre, cursos)
 
-	fmt.Println(base, altura, area)
+	// Sprintf
+	message := fmt.Sprintf("%s tiene más de %d cursos", nombre, cursos)
+	fmt.Println(message)
 
-	// Zero value
-	var a int
-	var b float64
-	var c string
-	var d bool
-
-	fmt.Println(a, b, c, d)
-
-	// Area de cuadrado
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
-	fmt.Println("Area cuadrado:", areaCuadrado)
-
-	x := 10
-	y := 50
-
-	// Suma
-	result := x + y
-	fmt.Println("Suma:", result)
-
-	// Resta
-	result = y - x
-	fmt.Println("Resta:", result)
-
-	// Multiplicación
-	result = x * y
-	fmt.Println("Multiplicación:", result)
-
-	// División
-	result = y / x
-	fmt.Println("División:", result)
-
-	// Módulo
-	result = y % x
-	fmt.Println("Módulo:", result)
-
-	// Incremental
-	x++
-	fmt.Println("Incremental:", x)
-
-	// Decremental
-	x--
-	fmt.Println("Decremental:", x)
+	// Tipo de datos
+	fmt.Printf("helloMessage: %T\n", helloMessage)
+	fmt.Printf("cursos: %T", cursos)
 }
